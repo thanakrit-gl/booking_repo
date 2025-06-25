@@ -50,6 +50,14 @@
       font-weight: bold;
       pointer-events: none;
     }
+    .paid::after {
+      content: "❌";
+      color: yellow;
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      pointer-events: none;
+    }
     .vip { background-color: #00cfff; }
     .vb { background-color: #a879ff; }
     .vc { background-color: #ffc93c; }
@@ -159,12 +167,12 @@
       try {
         const response = await fetch('https://script.google.com/macros/s/AKfycbzzYbeMxVwslctyUuZCb8LMtzkhXi28Jr6E-O9Z91vsRH4Iawjs8MDO8KAqy4OkQ94cfg/exec'); // Static or serverless URL
         const data = await response.json();
-        const booked = data.booked;
+        const marked = data.marked;
 
-        booked.forEach(id => {
+        marked.forEach(({ id, status }) => {
           const el = document.querySelector(`[data-table="${id}"]`);
           if (el) {
-            el.classList.add("booked");
+            el.classList.add(status);  // "booked" or "paid"
           }
         });
       } catch (err) {

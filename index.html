@@ -5,76 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VOID 2025 Reservation</title>
   <style>
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-}
-
-.layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap; /* allow responsive wrap */
-}
-
-.zone {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.table {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.booked::after {
-  content: "🕒";
-  color: gold;
-  position: absolute;
-  font-size: 24px;
-  font-weight: bold;
-  pointer-events: none;
-}
-
-.paid::after {
-  content: "❌";
-  color: red;
-  position: absolute;
-  font-size: 24px;
-  font-weight: bold;
-  pointer-events: none;
-}
-
-.center-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.stage-grid,
-.bar-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-/* Mobile-friendly stacking */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 40px;
+    }
+    .layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .table {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      position: relative;
+    }
+    .booked::after {
+      content: "🕒";
+      color: gold;
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      pointer-events: none;
+    }
+    .paid::after {
+      content: "❌";
+      color: red;
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      pointer-events: none;
+    }
+    .vip { background-color: #00cfff; }
+    .vb { background-color: #a879ff; }
+    .vc { background-color: #ffc93c; }
+    .va { background-color: #ff4d4d; }
+    .regular { background-color: #3399ff; }
+    .bar { background-color: #b399ff; }
+    .center-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .stage-grid, .bar-grid {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    /* Mobile-friendly stacking */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;

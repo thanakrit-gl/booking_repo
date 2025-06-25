@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VOID 2025 Reservation</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 40px;
+    }
+    .layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .table {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      position: relative;
+    }
+    .booked::after {
+      content: "❌";
+      color: red;
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      pointer-events: none;
+    }
+    .vip { background-color: #00cfff; }
+    .vb { background-color: #a879ff; }
+    .vc { background-color: #ffc93c; }
+    .va { background-color: #ff4d4d; }
+    .regular { background-color: #3399ff; }
+    .bar { background-color: #b399ff; }
+    .center-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .stage-grid, .bar-grid {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>VOID 2025 RESERVATION</h1>
+  <div class="layout">
+    <div class="zone">
+      <div class="label">LEFT</div>
+      <div class="table vip" data-table="V8">V8</div>
+      <div class="table vip" data-table="V9">V9</div>
+      <div class="table vip" data-table="V10">V10</div>
+      <div class="table vip" data-table="V11">V11</div>
+      <div class="table vip" data-table="V12">V12</div>
+      <div class="table vip" data-table="V13">V13</div>
+      <div class="table vip" data-table="V14">V14</div>
+    </div>
+    <div class="zone">
+      <div class="label">STAGE</div>
+      <div class="stage-grid">
+        <div class="table vb" data-table="VB1">VB1</div>
+        <div class="table vb" data-table="VB2">VB2</div>
+        <div class="table vb" data-table="VB6">VB6</div>
+        <div class="table vc" data-table="VC1">VC1</div>
+        <div class="table vb" data-table="VB3">VB3</div>
+        <div class="table vb" data-table="VB5">VB5</div>
+        <div class="table vb" data-table="VB4">VB4</div>
+      </div>
+      <div class="label">DANCE FLOOR</div>
+      <div class="center-grid">
+        <div class="table regular" data-table="1">1</div>
+        <div class="table regular" data-table="2">2</div>
+        <div class="table regular" data-table="3">3</div>
+        <div class="table regular" data-table="4">4</div>
+        <div class="table regular" data-table="5">5</div>
+        <div class="table regular" data-table="6">6</div>
+        <div class="table regular" data-table="7">7</div>
+        <div class="table regular" data-table="8">8</div>
+        <div class="table regular" data-table="9">9</div>
+        <div class="table regular" data-table="10">10</div>
+        <div class="table regular" data-table="11">11</div>
+        <div class="table regular" data-table="12">12</div>
+        <div class="table regular" data-table="13">13</div>
+        <div class="table regular" data-table="14">14</div>
+        <div class="table regular" data-table="15">15</div>
+        <div class="table regular" data-table="16">16</div>
+        <div class="table regular" data-table="17">17</div>
+        <div class="table regular" data-table="18">18</div>
+        <div class="table regular" data-table="19">19</div>
+        <div class="table regular" data-table="20">20</div>
+        <div class="table regular" data-table="21">21</div>
+        <div class="table regular" data-table="22">22</div>
+        <div class="table regular" data-table="23">23</div>
+        <div class="table regular" data-table="24">24</div>
+        <div class="table regular" data-table="25">25</div>
+        <div class="table regular" data-table="26">26</div>
+        <div class="table regular" data-table="27">27</div>
+        <div class="table regular" data-table="28">28</div>
+      </div>
+      <div class="bar-grid">
+        <div class="table regular" data-table="29">29</div>
+        <div class="table regular" data-table="31">31</div>
+        <div class="table vc" data-table="VC2">VC2</div>
+        <div class="table regular" data-table="30">30</div>
+        <div class="table regular" data-table="32">32</div>
+      </div>
+      <div class="table bar">BAR</div>
+    </div>
+    <div style="display: flex; flex-direction: row; gap: 20px;">
+      <div class="zone">
+        <div class="label">RIGHT</div>
+        <div class="table vip" data-table="V1">V1</div>
+        <div class="table vip" data-table="V2">V2</div>
+        <div class="table vip" data-table="V3">V3</div>
+        <div class="table vip" data-table="V4">V4</div>
+        <div class="table vip" data-table="V5">V5</div>
+        <div class="table vip" data-table="V6">V6</div>
+        <div class="table vip" data-table="V7">V7</div>
+      </div>
+      <div class="zone">
+        <div class="label">ATTIC</div>
+        <div class="table va" data-table="VA1">VA1</div>
+        <div class="table va" data-table="VA2">VA2</div>
+        <div class="table va" data-table="VA3">VA3</div>
+        <div class="table va" data-table="VA4">VA4</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function markBookedTables() {
+      try {
+        const response = await fetch('/api/booked-tables.json'); // Static or serverless URL
+        const data = await response.json();
+        const booked = data.booked;
+
+        booked.forEach(id => {
+          const el = document.querySelector(`[data-table="${id}"]`);
+          if (el) {
+            el.classList.add("booked");
+          }
+        });
+      } catch (err) {
+        console.error("Failed to fetch booked tables", err);
+      }
+    }
+
+    markBookedTables();
+  </script>
+</body>
+</html>
